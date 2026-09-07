@@ -411,230 +411,131 @@ ul, ol { list-style: none; }
 }
 
 /* ==========================================================
-   完全セルフ型コンセプト版 追加スタイル
+   完全セルフ型版 追加スタイル
    ========================================================== */
 
-/* ---------- FV ---------- */
-.fv__plus {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.9;
-  color: #f2ede3;
-  margin: 16px 0 24px;
-  padding-left: 12px;
-  border-left: 3px solid var(--gold);
-}
-
-/* ---------- Sec.2 共感 ---------- */
-.empathy__list { display: grid; gap: 10px; margin: 26px 0; }
-.empathy__list li {
+/* ---------- FV: 手に入るもの ---------- */
+.fv__gets { display: grid; gap: 7px; margin: 16px 0 20px; }
+.fv__gets li {
   position: relative;
-  padding: 14px 16px 14px 40px;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 6px;
-  font-size: 15.5px;
-  line-height: 1.7;
+  padding: 9px 12px 9px 32px;
+  background: rgba(10,8,5,.62);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 5px 5px 0;
+  font-size: 14.5px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #f4efe5;
 }
-.empathy__list li::before {
+.fv__gets li::before {
   content: "";
   position: absolute;
-  left: 16px; top: 50%;
-  width: 12px; height: 2px;
-  background: var(--red);
-  transform: translateY(-50%);
+  left: 13px; top: 15px;
+  width: 6px; height: 11px;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(42deg);
 }
-.empathy__lead { font-size: 15.5px; line-height: 2; color: #cdc5b7; }
+.fv__gets em { font-style: normal; color: var(--gold); }
 
-/* ---------- Sec.3 式 ---------- */
-.formula {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 28px 0;
-  padding: 22px 14px;
-  background: var(--dark);
-  border-radius: 10px;
-}
-.formula span {
-  font-family: var(--serif);
-  font-size: 17px;
-  font-weight: 600;
-  color: #fff;
-  padding: 8px 12px;
-  border: 1px solid rgba(193,154,91,.5);
-  border-radius: 5px;
-}
-.formula em { font-style: normal; color: var(--gold); font-weight: 700; font-size: 16px; }
-.whatis__punch strong { display: block; margin-top: 8px; color: var(--gold-deep); }
+/* ---------- 相場比較の一律注記 ---------- */
+.compare__flat { font-size: 13.5px; font-weight: 700; color: var(--gold-deep); margin-top: 4px; }
 
-/* ---------- Sec.4 STEP ---------- */
-.step {
+/* ---------- 導入機器（詳細カード） ---------- */
+.mc {
   background: var(--white);
   border: 1px solid #e3dbcd;
   border-radius: 12px;
   overflow: hidden;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
-.step__head { padding: 22px 20px 16px; border-bottom: 1px solid #efe8db; }
-.step__no {
+.mc__photo { background: var(--cream); }
+.mc__photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.mc__photo img[src*="machine-"] { object-fit: contain; padding: 22px; }
+.mc__body { padding: 22px 20px 24px; }
+.mc__tag {
   display: inline-block;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: .16em;
   color: #fff;
   background: var(--gold-deep);
-  padding: 5px 12px;
+  padding: 5px 11px;
   border-radius: 3px;
   margin-bottom: 12px;
 }
-.step__title { font-family: var(--serif); font-size: 23px; font-weight: 600; line-height: 1.55; }
-.step__photo img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; background: var(--cream); }
-.step__photo img[src*="machine-"] { object-fit: contain; padding: 18px; }
-.step__body { padding: 22px 20px 26px; }
-.step__body p { font-size: 15px; line-height: 2; margin-bottom: 14px; }
-.step__body p:last-child { margin-bottom: 0; }
-.step__body strong { color: var(--gold-deep); }
-.step__spec {
-  font-size: 13.5px !important;
-  line-height: 1.85 !important;
-  color: var(--ink-weak);
-  background: var(--cream);
-  border-left: 3px solid var(--gold);
-  padding: 12px 14px;
-  border-radius: 0 5px 5px 0;
-}
-.step__punch {
+.mc__name { font-family: var(--serif); font-size: 25px; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
+.mc__catch {
   font-family: var(--serif);
-  font-size: 21px !important;
+  font-size: 19px;
   font-weight: 600;
-  line-height: 1.6 !important;
-  color: var(--ink);
-  text-align: center;
-  padding: 18px 12px;
-  background: rgba(193,154,91,.14);
-  border-radius: 8px;
+  color: var(--gold-deep);
+  line-height: 1.5;
+  margin-bottom: 14px;
 }
-.step__punch--quiet { font-size: 18px !important; background: none; color: var(--ink-weak); }
-.step__for { display: grid; gap: 8px; margin-top: 6px; }
-.step__for li {
-  font-size: 14px;
-  line-height: 1.7;
-  padding: 10px 14px;
-  background: var(--paper);
-  border-radius: 5px;
-  color: var(--ink-weak);
-}
-.step__for li::before { content: "「"; }
-.step__for li::after { content: "」"; }
-.step__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.step__tags li {
-  font-size: 13.5px;
+.mc__desc { font-size: 14.5px; line-height: 1.95; margin-bottom: 14px; }
+.mc__desc strong { color: var(--ink); background: linear-gradient(transparent 62%, rgba(193,154,91,.35) 62%); }
+.mc__parts { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 14px; }
+.mc__parts li {
+  font-size: 13px;
   font-weight: 700;
-  padding: 7px 14px;
+  padding: 6px 13px;
   border: 1px solid var(--gold);
   border-radius: 999px;
   color: var(--gold-deep);
 }
-
-/* ---------- STEP間のブリッジ ---------- */
-.bridge {
-  text-align: center;
-  padding: 26px 18px;
-  margin-bottom: 22px;
-  border: 1px dashed var(--gold);
-  border-radius: 12px;
+.mc__spec {
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--ink-weak);
+  background: var(--cream);
+  border-left: 3px solid #d9cdb6;
+  padding: 11px 13px;
+  border-radius: 0 5px 5px 0;
+  margin-bottom: 12px;
 }
-.bridge--dark { background: var(--dark); border-style: solid; border-color: rgba(193,154,91,.4); color: #efe9df; }
-.bridge__lead { font-family: var(--serif); font-size: 19px; font-weight: 600; line-height: 1.6; margin-bottom: 16px; }
-.bridge__flow { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; margin-bottom: 14px; }
-.bridge__flow span { font-size: 14px; font-weight: 700; padding: 7px 12px; background: var(--dark); color: #fff; border-radius: 4px; }
-.bridge__flow i {
-  width: 0; height: 0;
-  border-left: 7px solid var(--gold);
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-}
-.bridge__list { display: grid; gap: 8px; margin-bottom: 14px; }
-.bridge__list li { font-size: 15px; line-height: 1.8; color: #ddd5c8; }
-.bridge__note { font-size: 13.5px; line-height: 1.85; color: var(--ink-weak); }
-.bridge--dark .bridge__note { color: #b9b0a1; }
+.mc__market { font-size: 14px; font-weight: 700; color: var(--red); }
 
-/* ---------- Sec.5 まとめ ---------- */
-.connect__list { display: grid; gap: 10px; margin: 28px 0; }
-.connect__list li {
+/* ---------- 美容機器 × サウナ の流れ ---------- */
+.cycle__list { display: grid; gap: 9px; margin: 26px 0 22px; }
+.cycle__list li {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 15px 16px;
+  padding: 14px 16px;
   background: rgba(255,255,255,.05);
   border: 1px solid rgba(193,154,91,.28);
   border-radius: 8px;
 }
-.connect__act {
+.cycle__no {
+  flex: 0 0 auto;
+  width: 27px; height: 27px; line-height: 27px;
+  border-radius: 50%;
+  background: var(--gold-deep);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+.cycle__act {
   font-family: var(--serif);
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--gold);
-  flex: 0 0 34%;
+  flex: 0 0 26%;
   line-height: 1.4;
 }
-.connect__how { font-size: 13.5px; line-height: 1.7; color: #ddd5c8; }
-.connect__punch { font-size: 15.5px; line-height: 2; text-align: center; margin-bottom: 28px; }
-.connect__punch strong { display: block; margin-top: 8px; font-family: var(--serif); font-size: 1.3em; color: var(--gold); }
-
-/* ---------- Sec.6 こんな方に ---------- */
-.recommend__list { display: grid; gap: 10px; margin: 26px 0; }
-.recommend__list li {
-  position: relative;
-  padding: 14px 16px 14px 40px;
-  background: var(--paper);
-  border: 1px solid #e6dece;
-  border-radius: 6px;
-  font-size: 15px;
-  line-height: 1.75;
+.cycle__how { font-size: 13.5px; line-height: 1.7; color: #ddd5c8; }
+.cycle__repeat {
+  border: 1px dashed rgba(193,154,91,.55);
+  border-radius: 8px;
+  padding: 20px 18px;
+  margin-bottom: 22px;
+  text-align: center;
 }
-.recommend__list li::before {
-  content: "";
-  position: absolute;
-  left: 17px; top: 19px;
-  width: 7px; height: 12px;
-  border-right: 2px solid var(--gold-deep);
-  border-bottom: 2px solid var(--gold-deep);
-  transform: rotate(42deg);
-}
-.recommend__photo { border-radius: 10px; overflow: hidden; }
-.recommend__photo img, .access__photo img, .whatis__photo img { width: 100%; height: auto; display: block; }
-.access__photo { border-radius: 10px; overflow: hidden; margin-bottom: 22px; }
-.access__note { font-size: 14.5px; line-height: 1.95; color: var(--ink-weak); margin-top: 12px; }
-
-@media (min-width: 768px) {
-  .fv__plus { font-size: 19px; }
-  .formula span { font-size: 20px; padding: 10px 16px; }
-  .formula em { font-size: 18px; }
-  .step { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "head photo" "body photo"; align-content: start; }
-  .step__head { grid-area: head; border-bottom: none; padding: 30px 28px 12px; }
-  .step__body { grid-area: body; padding: 0 28px 30px; }
-  .step__photo { grid-area: photo; height: 100%; }
-  .step__photo img { height: 100%; aspect-ratio: auto; }
-  .step__title { font-size: 27px; }
-  .step__body p { font-size: 15.5px; }
-  .step__punch { font-size: 23px !important; }
-  .bridge { padding: 36px 24px; }
-  .bridge__lead { font-size: 23px; }
-  .connect__list { grid-template-columns: repeat(2, 1fr); }
-  .connect__punch { font-size: 17px; }
-  .recommend__list { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* PC2カラム時: 画像列が本文の高さに引き伸ばされないよう、上端に配置して比率を保つ */
-@media (min-width: 768px) {
-  .step__photo { align-self: start; position: sticky; top: 24px; }
-  .step__photo img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
-  .step__photo img[src*="machine-"] { aspect-ratio: 1 / 1; object-fit: contain; padding: 30px; background: var(--cream); }
-}
+.cycle__repeat p { font-size: 15px; line-height: 2; color: #ddd5c8; }
+.cycle__punch { font-size: 16px; line-height: 1.9; text-align: center; }
+.cycle__punch strong { display: block; margin-top: 6px; font-family: var(--serif); font-size: 1.4em; color: var(--gold); }
 
 /* ---------- 一律料金 ---------- */
 .price-flat {
@@ -648,16 +549,30 @@ ul, ol { list-style: none; }
 .price-flat__label { font-size: 14px; font-weight: 700; color: var(--gold); letter-spacing: .04em; margin-bottom: 12px; }
 .price-flat__main { font-family: var(--serif); font-size: 22px; font-weight: 600; color: #fff; line-height: 1.25; white-space: nowrap; }
 .price-flat__main em { font-style: normal; color: var(--gold); font-size: 2.3em; font-weight: 700; vertical-align: -4px; }
-.price-flat__main span { font-size: 0.85em; }
+.price-flat__main span { font-size: .85em; }
 .price-flat__note { font-size: 13.5px; line-height: 1.85; color: #ddd5c8; margin-top: 12px; }
+.price-flat__inctitle { font-size: 13.5px; font-weight: 700; text-align: center; color: var(--gold); margin-bottom: 12px; }
 .price-flat__inc { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 18px; }
 .price-flat__inc li {
-  font-size: 13.5px; font-weight: 700; letter-spacing: .02em;
+  font-size: 13.5px; font-weight: 700;
   padding: 8px 14px; border: 1px solid rgba(193,154,91,.5);
   border-radius: 999px; color: #f6efe3;
 }
+
 @media (min-width: 768px) {
+  .fv__gets { grid-template-columns: repeat(2, 1fr); gap: 9px; }
+  .fv__gets li { font-size: 15.5px; }
+  .mc { display: grid; grid-template-columns: 40% 1fr; align-items: start; }
+  .mc__photo { height: 100%; }
+  .mc__photo img { height: 100%; aspect-ratio: auto; min-height: 260px; }
+  .mc__photo img[src*="machine-"] { padding: 30px; }
+  .mc__name { font-size: 28px; }
+  .mc__catch { font-size: 21px; }
+  .cycle__list { grid-template-columns: repeat(2, 1fr); }
   .price-flat { padding: 34px 26px 32px; }
   .price-flat__main { font-size: 26px; }
   .price-flat__inc li { font-size: 15px; padding: 9px 18px; }
 }
+/* FVキャッチ: 1行6文字前後に収める */
+.fv__catch { font-size: 34px; letter-spacing: 0; }
+@media (min-width: 768px) { .fv__catch { font-size: 52px; } }
