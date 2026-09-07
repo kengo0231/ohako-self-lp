@@ -576,3 +576,56 @@ ul, ol { list-style: none; }
 /* FVキャッチ: 1行6文字前後に収める */
 .fv__catch { font-size: 34px; letter-spacing: 0; }
 @media (min-width: 768px) { .fv__catch { font-size: 52px; } }
+
+/* ---------- FV: ベネフィット一行 ---------- */
+.fv__benefit {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--gold);
+  margin: 14px 0 16px;
+  text-shadow: 0 2px 18px rgba(0,0,0,.5);
+}
+
+/* ---------- 何が手に入るのか ---------- */
+.gets__grid { display: grid; gap: 14px; margin: 30px 0 26px; }
+.get {
+  background: var(--white);
+  border: 1px solid #e3dbcd;
+  border-radius: 10px;
+  padding: 22px 20px 24px;
+}
+.get__when {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: #fff;
+  background: var(--gold-deep);
+  padding: 5px 12px;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+.get__what { font-family: var(--serif); font-size: 24px; font-weight: 600; line-height: 1.45; margin-bottom: 10px; }
+.get__desc { font-size: 14.5px; line-height: 1.95; color: var(--ink-weak); }
+
+.gets__punch {
+  background: var(--dark);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 20px 32px;
+  text-align: center;
+}
+.gets__punch-1 { font-size: 16px; line-height: 1.95; margin-bottom: 16px; }
+.gets__punch-2 { font-family: var(--serif); font-size: 22px; font-weight: 600; line-height: 1.4; }
+.gets__punch-2 em { font-style: normal; color: var(--gold); font-size: 1.5em; font-weight: 700; vertical-align: -2px; }
+
+@media (min-width: 768px) {
+  .fv__benefit { font-size: 24px; }
+  .gets__grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .get__what { font-size: 26px; }
+  .gets__punch { padding: 42px 30px 44px; }
+  .gets__punch-1 { font-size: 19px; }
+  .gets__punch-2 { font-size: 27px; }
+}
